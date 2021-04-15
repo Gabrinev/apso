@@ -4,17 +4,27 @@ import 'package:apso/src/pages/scr.dart';
 import 'package:apso/src/pages/sll.dart';
 import 'package:apso/src/pages/pvi.dart';
 import 'package:apso/src/pages/aps.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:apso/src/pages/login.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Named Routes Demo',
+    debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('ca', 'ES'),
+        const Locale('es', 'ES'),
+      ],
     // Start the app with the "/" named route. In this case, the app starts
     // on the FirstScreen widget.
     initialRoute: '/',
     routes: {
       // When navigating to the "/" route, build the FirstScreen widget.
-      '/': (context) => MyLogin(),
+      '/': (context) => FirstScreen(),
       // When navigating to the "/second" route, build the SecondScreen widget.
       '/pep': (context) => InputPage(),
       '/scr': (context) => SrcPage(),
