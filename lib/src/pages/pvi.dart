@@ -234,13 +234,13 @@ Widget _sortida() {
 
   _selectDate(BuildContext context, String tipo, TextEditingController controller) async {
 
-    DateTime picked = await showDatePicker(
+    DateTime picked = (await showDatePicker(
       context: context,
       initialDate: new DateTime.now(),
       firstDate: new DateTime(2018),
       lastDate: new DateTime(2025),
       locale: Locale('ca', 'ES')
-    );
+    ))!;
     if ( picked != null ) {
         setState(() {
           _dia = picked.day.toString();
@@ -256,10 +256,10 @@ Widget _sortida() {
   }
 
   _selectTime(BuildContext context, TextEditingController controller, String tipo, String date ) async{
-    TimeOfDay picked = await showTimePicker
+    TimeOfDay picked = (await showTimePicker
     (context: context, 
     initialTime: new TimeOfDay.now()
-    );
+    ))!;
     if (picked != null && tipo == ''){
       setState(() {
         _hora = picked.hour.toString();

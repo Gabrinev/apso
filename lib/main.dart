@@ -1,4 +1,4 @@
-import 'package:apso/src/pages/pep.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:apso/src/pages/scr.dart';
 import 'package:apso/src/pages/sll.dart';
@@ -7,7 +7,9 @@ import 'package:apso/src/pages/aps.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:apso/src/pages/login.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MaterialApp(
     title: 'Named Routes Demo',
     debugShowCheckedModeBanner: false,
@@ -24,9 +26,9 @@ void main() {
     initialRoute: '/',
     routes: {
       // When navigating to the "/" route, build the FirstScreen widget.
-      '/': (context) => FirstScreen(),
+      '/': (context) => SignIn(),
       // When navigating to the "/second" route, build the SecondScreen widget.
-      '/pep': (context) => InputPage(),
+      '/menu': (context) => FirstScreen(),
       '/scr': (context) => SrcPage(),
       '/sll': (context) => SllPage(),
       '/pvi': (context) => PviPage(),

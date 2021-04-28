@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562665610474",
+    "project_id": "seguiment-serveis",
+    "storage_bucket": "seguiment-serveis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562665610474:android:056e16b2733f80f8e84b93",
+        "android_client_info": {
+          "package_name": "com.example.apso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562665610474-jl1kqpigm82cg9vibd3sk1diug883959.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4zpUk5GbFNLEAlbguBWl5r5fbscxr2_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562665610474-jl1kqpigm82cg9vibd3sk1diug883959.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
